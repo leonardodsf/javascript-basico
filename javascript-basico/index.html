@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Javascript Básico</title>
+  </head>
+  <body onload="load()">
+    <div class="load" id="loading">
+      <div class="gif">
+        <lottie-player
+          src="https://assets8.lottiefiles.com/packages/lf20_fnQWVN.json"
+          background="transparent"
+          speed="1"
+          style="width: 80px; height: 80px;"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </div>
+
+    <!-- COLOQUE A DIV "loading" ACIMA DE TODO O CONTEUDO DO SITE (ABAIXO DA <body>) -->
+
+    <div id="conteudo" style="display: none;">
+      Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.
+      Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis
+      santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra
+      quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien
+      in monti palavris qui num significa nadis i pareci latim. Interessantiss
+      quisso pudia ce receita de bolis, mais bolis eu num gostis.
+      <select onchange="change(this)">
+        <option value="1"> valor1 </option>
+        <option value="2"> valor2 </option>
+        <option value="3"> valor3 </option>
+      </select>
+    </div>
+
+    <!-- <button onclick="botao()">click aqui</button>
+    <h3 id="thank" onclick="redirect()"></h3>
+    <h3 id="change" onmouseover="hover(this)">Passar o mouse</h3> -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      function botao() {
+        document.getElementById("thank").innerHTML = "Obrigado por clicar";
+      }
+
+      function redirect() {
+        window.open("https://github.com/leonardodsf");
+        // window.location.href = "https://github.com/leonardodsf";
+      }
+
+      function hover(element) {
+        // document.getElementById("change").innerHTML = "passou";
+        element.innerHTML = "passou";
+      }
+
+      function load() {
+        var i = setInterval(function () {
+          clearInterval(i);
+          // O código desejado é apenas isto:
+          document.getElementById("loading").style.display = "none";
+          document.getElementById("conteudo").style.display = "inline";
+        }, 3000);
+      }
+
+      function change(element) {
+        console.log(element.value);
+      }
+      // var nome = "Leonardo Flores";
+      //replace apenas substitui o valor de uma variavel por outro valor
+      // console.log(nome.replace("Leonardo Flores", "Joao Silva"));
+      //deixa todas as letras da variavel em caixa alta
+      // console.log(nome.toUpperCase(nome));
+
+      // var lista = ["maça", "pera", "laranja"];
+      //imprime no console o item na posição 0 do array
+      // console.log(lista[0]);
+
+      //insere um item no array
+      // lista.push("uva");
+      // console.log(lista);
+      //remove o ultimo item do array
+      // list.pop();
+
+      //mostra a quantide de items que tem no array
+      // console.log(lista.length);
+      //ele inverte as posições, no caso em decrescente
+      // console.log(lista.reverse());
+      //converte os itens do array em string, se utilizar [], irá converter apenas aquele
+      //item que voce escolheu para string
+      // console.log(lista.toString()[0]);
+
+      //ele muda para string, mas voce pode escolher com qual caractere irá separar estes itens
+      // console.log(lista.join(" - "));
+
+      // var fruta = [
+      //   { nome: "maça", cor: "vermelha" },
+      //   { nome: "uva", cor: "roxa" },
+      // ];
+      // console.log(fruta);
+
+      // var idade = 18;
+
+      /*
+      var idade = prompt("Qual a sua idade");
+
+      if (idade >= 18) {
+        alert("maior de idade");
+      } else {
+        alert("menor de idade");
+      } */
+
+      /*
+      var count = 2;
+
+      while (count < 5) {
+        console.log(count);
+        count++;
+      } */
+      // var count;
+      // for (count = 0; count < 5; count++) {
+      //   console.log(count);
+      // }
+
+      // var d = new Date();
+
+      // console.log("Hoje é " + d.getDate() + "/" + (d.getMonth() + 1));
+    </script>
+  </body>
+</html>
